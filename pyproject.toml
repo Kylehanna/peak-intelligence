@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "med-redact-demo"
+version = "0.1.0"
+description = "Peak Intelligence legal document redaction and AI review platform prototype"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "streamlit>=1.44.0",
+  "pymupdf>=1.25.5",
+  "presidio-analyzer>=2.2.358",
+  "spacy>=3.8.0",
+  "openai>=1.75.0",
+  "langchain-openai>=0.3.14",
+  "langchain-text-splitters>=0.3.8",
+  "python-dotenv>=1.1.0",
+  "tiktoken>=0.9.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
