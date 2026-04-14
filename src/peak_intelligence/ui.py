@@ -1,8 +1,8 @@
 import streamlit as st
 from pathlib import Path
 
-from med_redact_demo.qa import answer_question
-from med_redact_demo.redaction import redact_pdf
+from peak_intelligence.qa import answer_question
+from peak_intelligence.redaction import redact_pdf
 
 
 st.set_page_config(page_title="Peak Intelligence", layout="wide")

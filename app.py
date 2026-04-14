@@ -5,7 +5,7 @@ import sys
 PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from med_redact_demo.ui import main
+from peak_intelligence.ui import main
 
 
 if __name__ == "__main__":

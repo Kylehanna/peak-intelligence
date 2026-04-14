@@ -4,7 +4,7 @@ import re
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from med_redact_demo.config import settings
+from peak_intelligence.config import settings
 
 
 def answer_question(document_text: str, question: str) -> str:

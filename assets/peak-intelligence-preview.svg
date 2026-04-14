@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <rect width="1440" height="900" fill="#F4F1EA"/>
+  <rect x="48" y="48" width="1344" height="804" rx="28" fill="#FFFDF8" stroke="#D8D1C5" stroke-width="2"/>
+  <rect x="88" y="88" width="1264" height="80" rx="18" fill="#163A36"/>
+  <text x="124" y="138" fill="#F8F4EC" font-family="Georgia, serif" font-size="34" font-weight="700">Peak Intelligence</text>
+  <text x="124" y="160" fill="#C8D8D4" font-family="Arial, sans-serif" font-size="18">AI-assisted document redaction and review for privacy-sensitive legal workflows</text>
+
+  <rect x="88" y="200" width="430" height="588" rx="24" fill="#F8F4EC" stroke="#D8D1C5" stroke-width="2"/>
+  <text x="118" y="246" fill="#163A36" font-family="Arial, sans-serif" font-size="26" font-weight="700">Redaction Workflow</text>
+  <rect x="118" y="274" width="370" height="56" rx="14" fill="#FFFFFF" stroke="#D8D1C5"/>
+  <text x="142" y="309" fill="#5B5B5B" font-family="Arial, sans-serif" font-size="19">synthetic_medical_record_source.pdf</text>
+  <rect x="118" y="352" width="170" height="54" rx="14" fill="#B1452F"/>
+  <text x="150" y="386" fill="#FFF8F1" font-family="Arial, sans-serif" font-size="20" font-weight="700">Redact PDF</text>
+  <rect x="306" y="352" width="182" height="54" rx="14" fill="#E9E2D6"/>
+  <text x="332" y="386" fill="#163A36" font-family="Arial, sans-serif" font-size="20" font-weight="700">Download PDF</text>
+  <text x="118" y="454" fill="#163A36" font-family="Arial, sans-serif" font-size="22" font-weight="700">Detected candidates</text>
+  <rect x="118" y="476" width="370" height="252" rx="18" fill="#FFFFFF" stroke="#D8D1C5"/>
+  <text x="142" y="520" fill="#B1452F" font-family="Courier New, monospace" font-size="20">[PERSON]</text>
+  <text x="142" y="558" fill="#163A36" font-family="Courier New, monospace" font-size="20">DOB: [REDACTED]</text>
+  <text x="142" y="596" fill="#163A36" font-family="Courier New, monospace" font-size="20">Phone: [REDACTED]</text>
+  <text x="142" y="634" fill="#163A36" font-family="Courier New, monospace" font-size="20">Address: [REDACTED]</text>
+  <text x="142" y="672" fill="#163A36" font-family="Courier New, monospace" font-size="20">MRN: [REDACTED]</text>
+
+  <rect x="548" y="200" width="804" height="588" rx="24" fill="#F8F4EC" stroke="#D8D1C5" stroke-width="2"/>
+  <text x="578" y="246" fill="#163A36" font-family="Arial, sans-serif" font-size="26" font-weight="700">Ask Questions Against Redacted Text</text>
+  <rect x="578" y="274" width="744" height="72" rx="16" fill="#FFFFFF" stroke="#D8D1C5"/>
+  <text x="608" y="319" fill="#5B5B5B" font-family="Arial, sans-serif" font-size="22">What medications were prescribed?</text>
+  <rect x="578" y="374" width="744" height="356" rx="18" fill="#FFFFFF" stroke="#D8D1C5"/>
+  <text x="608" y="424" fill="#163A36" font-family="Arial, sans-serif" font-size="22" font-weight="700">Answer</text>
+  <text x="608" y="470" fill="#404040" font-family="Arial, sans-serif" font-size="21">The record indicates the patient was prescribed lisinopril</text>
+  <text x="608" y="502" fill="#404040" font-family="Arial, sans-serif" font-size="21">for blood pressure management and advised to follow up</text>
+  <text x="608" y="534" fill="#404040" font-family="Arial, sans-serif" font-size="21">after additional diagnostics.</text>
+  <text x="608" y="598" fill="#7B746A" font-family="Arial, sans-serif" font-size="19">This preview is a visual mockup for the GitHub README.</text>
+  <text x="608" y="628" fill="#7B746A" font-family="Arial, sans-serif" font-size="19">The live app is launched locally with Streamlit from app.py.</text>
+</svg>

@@ -2,6 +2,49 @@
 
 Peak Intelligence is a lightweight AI document-intelligence platform prototype built to show how legal and professional-services teams can upload sensitive records, redact likely PII, and query the sanitized output in a controlled local workflow.
 
+## Demo At A Glance
+
+If someone opens this repository on GitHub, they should understand the demo in under a minute:
+- Start with this README for the product overview and setup
+- Run the app from the project root with `streamlit run app.py`
+- Use the bundled synthetic PDFs in `sample_data/`
+- The main application entrypoint is `app.py`
+- The implementation lives in `src/peak_intelligence/`
+
+## Interface Preview
+
+![Peak Intelligence demo preview](assets/peak-intelligence-preview.svg)
+
+## What This Repo Demonstrates
+
+This repository demonstrates a first-pass legal AI workflow:
+- intake of a sensitive PDF
+- candidate PII detection and redaction
+- download of a sanitized file
+- AI-assisted question answering over the cleaned text
+
+For law firm clients, this shows the beginning of a privacy-aware document workflow.
+
+For recruiters, this shows a complete applied-AI product slice from interface to document processing to model-backed interaction.
+
+## Quick Start
+
+1. Create and activate a Python 3.11 virtual environment.
+2. Install dependencies with `pip install -e .`.
+3. Install a spaCy English model:
+   `python -m spacy download en_core_web_sm`
+4. Optionally set `OPENAI_API_KEY` for model-backed answers.
+5. Run the demo with `streamlit run app.py`.
+
+## Repo Layout
+
+- `README.md`: product framing, setup, and use cases
+- `app.py`: top-level Streamlit launcher
+- `src/peak_intelligence/`: redaction, UI, config, and Q&A logic
+- `sample_data/`: bundled demo PDFs
+- `scripts/`: helper scripts for generating sample inputs
+- `pyproject.toml`: dependencies and package metadata
+
 This repository is positioned as:
 - A first AI solution for law firm client conversations
 - A working proof-of-build for recruiters evaluating product, applied AI, and workflow automation experience
@@ -56,12 +99,23 @@ When presenting this repository, the strongest framing is:
 
 Peak Intelligence is an early legal-document intelligence platform that starts with privacy-sensitive document intake. The first implemented workflow is medical PDF redaction and AI-assisted review, which is directly relevant for law firm clients handling regulated or confidential records.
 
+The right loose brand tone is practical rather than overclaimed: this is a platform prototype, not a fully generalized legal operating system. That makes it credible in front of both law firm buyers and recruiters.
+
 For recruiters, this repo shows end-to-end product thinking:
 - user-facing interface design
 - document processing and text extraction
 - PII detection and redaction logic
 - retrieval-style Q&A workflow
 - local-first privacy-aware architecture
+
+## Demo Walkthrough
+
+The easiest way to present the demo is:
+- open the bundled synthetic record
+- run redaction to show candidate entity masking
+- preview the cleaned text
+- ask a short question about medications, follow-up, or diagnostics
+- frame the current version as a first implemented workflow within a larger platform direction
 
 ## Architecture
 
@@ -108,6 +162,15 @@ The natural next steps for the platform are:
 - matter-specific redaction presets for legal workflows
 - audit logging and review controls
 - support for broader legal document classes beyond medical records
+
+## Recruiter Signal
+
+This repository is useful as a portfolio artifact because it shows:
+- product framing tied to a clear buyer persona
+- a usable front end rather than a notebook-only prototype
+- applied NLP and document processing in a real workflow
+- thoughtful privacy constraints and local-first design
+- a credible path from prototype to platform
 
 ## Guardrails
 
