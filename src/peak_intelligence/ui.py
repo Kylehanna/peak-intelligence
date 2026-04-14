@@ -15,8 +15,7 @@ SOURCE_SAMPLE_PDF_PATH = PROJECT_ROOT / "sample_data" / "synthetic_medical_recor
 
 def main() -> None:
     st.title("Peak Intelligence")
-    st.caption("AI-assisted document redaction and question answering for privacy-sensitive legal workflows.")
-    st.info("Run this prototype locally with synthetic records only. No persistent storage is built into the app.")
+    st.caption("AI-assisted document redaction and review for privacy-sensitive legal workflows.")
     st.sidebar.header("Demo prompts")
     st.sidebar.write("Try these after redaction:")
     st.sidebar.write("- What medications were prescribed?")
@@ -63,14 +62,15 @@ def main() -> None:
     left, right = st.columns([1, 1])
 
     with left:
-        st.subheader("Redaction")
+        st.subheader("Redaction Workflow")
         if st.button("Redact PDF", type="primary"):
             result = redact_pdf(source_bytes)
             st.session_state["redaction_result"] = result
 
         result = st.session_state.get("redaction_result")
         if result:
-            st.success(f"Redacted {result.entity_count} candidate entities.")
+            st.markdown("**Detected candidates**")
+            st.caption(f"{result.entity_count} candidate entities identified for redaction.")
             for warning in result.warnings:
                 st.warning(warning)
             st.download_button(
@@ -83,7 +83,7 @@ def main() -> None:
                 st.text(result.redacted_text[:4000] or "No text extracted.")
 
     with right:
-        st.subheader("Ask questions")
+        st.subheader("Ask Questions Against Redacted Text")
         question = st.text_input("Question", placeholder="What medications were prescribed?")
         if st.button("Ask"):
             result = st.session_state.get("redaction_result")
@@ -93,4 +93,5 @@ def main() -> None:
                 st.info("Enter a question.")
             else:
                 answer = answer_question(result.redacted_text, question)
+                st.markdown("**Answer**")
                 st.write(answer)
